@@ -1,0 +1,35 @@
+.container {
+    position: relative; 
+    padding: 10px; 
+    margin: 5px; 
+}
+
+.title {
+    text-align: center; 
+    position: relative;
+    color: #c21532;  
+}
+
+ul {
+    list-style-type: none;
+    font-family: 'Merriweather', serif;
+}
+
+li {
+    padding-top: 0.8em; 
+    padding-bottom: 0.8em; 
+    color: #6b0db8;
+}
+
+p {
+    font-size: 25px; 
+    color: #bd0221; 
+}
+
+.image {
+    width: 500px; 
+    padding: 50px; 
+    display: block; 
+    margin-right: auto; 
+    margin-left: auto; 
+}
