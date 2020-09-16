@@ -7,7 +7,7 @@
 .title {
     text-align: center; 
     position: relative;
-    color: #c21532;  
+    color: #18b3de; 
 }
 
 ul {
@@ -45,4 +45,8 @@ p {
 
 .costSentence3 {
     padding-left: 3em; 
+}
+
+.costSentence4 {
+    padding-left: 9.5em; 
 }

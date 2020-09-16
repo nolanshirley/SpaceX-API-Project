@@ -117,10 +117,39 @@ EVERYTHING IN THE THIRD COLUMN
     falcon1ImageTag.src = falcon1ImageURL; 
     listItem3.appendChild(falcon1ImageTag); 
     falcon1ImageTag.className = 'image'; 
+/*
+EVERYTHING IN THE FOURTH COLUMN
+*/
+    let starshipHeadline = 'What goes into creating a two-stage rocket system?';
+    let starshipDesc = data[3].description;
+
+    let para4 = document.createElement('p'); 
+    para4.innerText = starshipHeadline; 
+    fourthColumn.appendChild(para4); 
+
+    listItem4 = document.createElement('ul'); 
+    listStarship = document.createElement('li'); 
+
+    listStarship.innerText = starshipDesc; 
+    fourthColumn.appendChild(listItem4); 
+    listItem4.appendChild(listStarship); 
+
+    let listStarshipCost = document.createElement('li'); 
+    let costOfStarship = data[3].cost_per_launch; 
+    listStarshipCost.innerText = `It costs approximately $${costOfStarship} to propel this rocket into orbit!`;
+
+    listItem4.appendChild(listStarshipCost); 
+    listStarshipCost.className = 'costSentence4'; 
+//add the two stage rocket image 
+    let starshipImageTag = document.createElement('img'); 
+    let starshipImageURL = data[3].flickr_images[0]; 
+
+    starshipImageTag.src = starshipImageURL; 
+    listItem4.appendChild(starshipImageTag); 
+    starshipImageTag.className = 'image'; 
 
 
 
-    
 }
 
 
