@@ -44,6 +44,7 @@ EVERYTHING IN THE FIRST COLUMN
     listCostOf9.innerText = `It costs $${falcon9Cost} per launch, what a deal!`
 
     listItem1.appendChild(listCostOf9); 
+    listCostOf9.className = 'costSentence'
 //adding image
     let falcon9ImageTag = document.createElement('img')
 
@@ -78,6 +79,7 @@ EVERYTHING IN THE SECOND COLUMN
     listCostOfHeavy.innerText = `It costs exactly $${costOfHeavy} to launch this rocket!`
 
     listItem2.appendChild(listCostOfHeavy); 
+    listCostOfHeavy.className = 'costSentence2'
 //add the image of the falcon heavy 
     let falconHeavyImageTag = document.createElement('img')
     let falconHeavyImageURL = data[2].flickr_images[4]
@@ -85,10 +87,40 @@ EVERYTHING IN THE SECOND COLUMN
     falconHeavyImageTag.src = falcon9ImgURL
     listItem2.appendChild(falconHeavyImageTag)
     falconHeavyImageTag.className = 'image'
+/*
+EVERYTHING IN THE THIRD COLUMN
+*/
+    let headlineFalcon1 = 'What happened to the Falcon 1 Rocket?';
+    let falcon1Desc = data[0].description;
+
+    let para3 = document.createElement('p');
+    para3.innerText = headlineFalcon1;
+    thirdColumn.appendChild(para3);
+
+    listItem3 = document.createElement('ul');
+    listFalcon1 = document.createElement('li');
+
+    listFalcon1.innerText = falcon1Desc;
+    thirdColumn.appendChild(listItem3); 
+    listItem3.appendChild(listFalcon1); 
+//add another list item to the third column
+    let listCostOfFalcon1 = document.createElement('li'); 
+    let costOfFalcon1 = data[0].cost_per_launch;
+    listCostOfFalcon1.innerText = `Back in prehistoric times, it would have costed $${costOfFalcon1} dollars per launch... that's chump change!`
+
+    listItem3.appendChild(listCostOfFalcon1); 
+    listCostOfFalcon1.className = 'costSentence3'; 
+//add the image for Falcon 1 
+    let falcon1ImageTag = document.createElement('img'); 
+    let falcon1ImageURL = data[0].flickr_images[0]; 
+
+    falcon1ImageTag.src = falcon1ImageURL; 
+    listItem3.appendChild(falcon1ImageTag); 
+    falcon1ImageTag.className = 'image'; 
 
 
 
-
+    
 }
 
 
